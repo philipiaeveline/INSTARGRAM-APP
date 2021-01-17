@@ -4,7 +4,7 @@
 [Philipia eveline](https://github.com/philipiaeveline/INSTARGRAM-APP)  
   
 # Description  
-This is a Django application for personal gallery that allows a user to upload images for other to see and be able to to share by coping the image link.
+Instagram is a social media platform that emphasizes photo and video sharing via its mobile app. You can take, edit, and publish visual content for your followers to interact with thorough likes, comments, and shares. Welcome to my instargram you downvote or upvote
   
 ##  Live Link  
  Click [View Site]( https://git.heroku.com/eve-pictures.git)  to visit the site
