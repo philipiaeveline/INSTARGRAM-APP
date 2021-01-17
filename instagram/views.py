@@ -170,7 +170,7 @@ def comment(request,id):
             comment.image_id = image
             comment.user_id = user_profile
             comment.save()
-            return redirect('gram-landing')
+            return redirect('instagram-landing')
     else:
         form = CommentForm()
     return render(request,'posts/comment.html',{"form":form, "images":images, "comments":comments})

@@ -7,7 +7,7 @@ from .views import (PostListView, PostDetailView, follow_unfollow,
     PostCreateView, PostUpdateView, PostDeleteView, UserListView, ProfileDetailView)
 
 urlpatterns = [
-    path('', PostListView.as_view(), name='gram-landing'),
+    path('', PostListView.as_view(), name='instagram-landing'),
     path('search/', views.searchprofile, name='search'),
     path('following/',views.posts_following, name='posts-follow-view'),
     path('post/<int:pk>/', PostDetailView.as_view(), name='post-detail'),

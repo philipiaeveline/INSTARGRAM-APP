@@ -34,14 +34,7 @@ class Profile(models.Model):
 
     class Meta:
         ordering=('-created',)
-        
-        # img=Image.open(self.prof_pic.path)
-        # if img.height >300 or img.height > 300:
-        #     output_size= (300, 300)
-        #     img.thumbnail(output_size)
-        #     img.save(self.prof_pic.path)
-
-
+       
 class Image(models.Model):
     image= CloudinaryField('image')
     author= models.ForeignKey(Profile, on_delete=models.CASCADE)
