@@ -1,7 +1,7 @@
 # WELCOME TO MY INSTAGRAM-APP
 ## Author  
-  
-[Philipia eveline/](https://github.com/philipiaeveline/WELCOME-TO-MY-GALLERY-APP)  
+
+[Philipia eveline](https://github.com/philipiaeveline/INSTARGRAM-APP)  
   
 # Description  
 This is a Django application for personal gallery that allows a user to upload images for other to see and be able to to share by coping the image link.
