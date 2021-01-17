@@ -7,15 +7,15 @@
 Instagram is a social media platform that emphasizes photo and video sharing via its mobile app. You can take, edit, and publish visual content for your followers to interact with thorough likes, comments, and shares. Welcome to my instargram you downvote or upvote
   
 ##  Live Link  
- Click [View Site]( https://git.heroku.com/eve-pictures.git)  to visit the site
+ Click [View Site]()  to visit the site
  
-## User Story  
+## User Stories
   
-* View different photos that interest them  
-* Click a single image to expand it and view the details of that photo  
-* Search for different categories   
-* Copy a link to the photo to share with my friends.  
-* View photos based on the location they were taken.
+* Sign in to the application to start using.
+* Upload my pictures to the application.
+* See my profile with all my pictures.
+* Follow other users and see their pictures on my timeline.
+* Like a picture and leave a comment on it.
 
 ## Setup and Installation  
 To get the code..  
