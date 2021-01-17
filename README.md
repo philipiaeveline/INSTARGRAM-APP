@@ -72,5 +72,5 @@ Open the application on your browser `127.0.0.1:8000`.
 If you have any question or contributions, please email me at [philipiaeveline13@gmail.com]  
   
 ## License 
-* [![License](https://img.shields.io/packagist/l/loopline-systems/closeio-api-wrapper.
-* Copyright (c) 2021 *philipia eveline *
+* [[License](https://img.shields.io/packagist/l/loopline-systems/closeio-api-wrapper.
+* Copyright (c) 2021  *philipia eveline *
