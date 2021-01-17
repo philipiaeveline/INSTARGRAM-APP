@@ -10,7 +10,7 @@ Instagram is a social media platform that emphasizes photo and video sharing via
  Click [View Site]()  to visit the site
  
 ## User Stories
-  
+ 
 * Sign in to the application to start using.
 * Upload my pictures to the application.
 * See my profile with all my pictures.
@@ -18,16 +18,16 @@ Instagram is a social media platform that emphasizes photo and video sharing via
 * Like a picture and leave a comment on it.
 
 ## Setup and Installation  
-To get the code..  
-To get the project .......  
+* To get the code..  
+* To get the project ..
 
 ##### Cloning the repository:  
  ```bash 
- https://github.com/philipiaeveline/WELCOME-TO-MY-GALLERY-APP.git 
+ https://github.com/philipiaeveline/INSTARGRAM-APP.git 
 ```
 ##### Navigate into the folder and install requirements  
  ```bash 
-cd Picture-Globe pip install -r requirements.txt 
+cd instagram-app  pip install -r requirements.txt 
 ```
 ##### Install and activate Virtual  
  ```bash 
@@ -37,7 +37,7 @@ cd Picture-Globe pip install -r requirements.txt
  ```bash 
  pip install -r requirements.txt 
 ```  
- ##### Setup Database  
+ ### Setup Database  
   SetUp your database User,Password, Host then make migrate  
  ```bash 
 python manage.py makemigrations pictures 
@@ -46,25 +46,22 @@ python manage.py makemigrations pictures
  ```bash 
  python manage.py migrate 
 ```
-##### Run the application  
+### Run the application  
  ```bash 
  python manage.py runserver 
 ``` 
-##### Running the application  
+### Running the application  
  ```bash 
  python manage.py server 
 ```
-##### Testing the application  
- ```bash 
- python manage.py test 
-```
+ 
 Open the application on your browser `127.0.0.1:8000`.  
   
   
 ## Technology used  
   
 * [Python3.7](https://www.python.org/)  
-* [Django 1.11](https://docs.djangoproject.com/en/2.2/)  
+* [Django ](https://docs.djangoproject.com/en/3.1.5/)  
 * [Heroku](https://heroku.com)  
   
   
@@ -75,5 +72,5 @@ Open the application on your browser `127.0.0.1:8000`.
 If you have any question or contributions, please email me at [philipiaeveline13@gmail.com]  
   
 ## License 
-* [![License](https://img.shields.io/packagist/l/loopline-systems/closeio-api-wrapper.svg)](https://github.com/philipiaeveline/WELCOME-TO-MY-GALLERY-APPmaster/LICENSE)  
-* Copyright (c) 2021 *PHILIPIA**
+* [![License](https://img.shields.io/packagist/l/loopline-systems/closeio-api-wrapper.
+* Copyright (c) 2021 *philipia eveline *
