@@ -134,11 +134,11 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         form.instance.author = self.request.user.profile
         return super().form_valid(form)
 
-    # def test_func(self):
-    #     post = self.get_object()
-    #     if self.request.user.profile == post.author:
-    #         return True
-    #     return False
+    def test_func(self):
+        post = self.get_object()
+        if self.request.user.profile == post.author:
+            return True
+        return False
 
 
 class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
