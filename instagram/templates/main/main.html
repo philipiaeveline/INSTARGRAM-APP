@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}
+   <h4>Main posts</h4>
+{% endblock %}
+{% block content %}
+<div class="ui grid">
+    <div class="row ">
+        
+        <br>
+        <div class="four wide column mt-30">
+           {{profile}} 
+           <br>
+           <a href="{% url 'user-posts' %}">
+           <button class="btn-sm btn-info">Who to Follow</button>
+           </a>
+           <br>
+           <h3>Following:</h3>
+           <ul>
+               {% for p in profile.following.all %}
+               {{ p.count}}
+               <li>{{ p }}</li>
+               {% endfor %}
+           </ul>
+        </div>
+        <hr>
+
+        <div class="twelve wide column">
+            <h3> Posts</h3>
+            <hr>
+            {% for post in posts %}
+            <div class="ui segment">
+                {{post.author}}
+                <hr>
+                <div>
+                <img src="{{post.image.url}}" height="300px" width="300px">
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock content %}

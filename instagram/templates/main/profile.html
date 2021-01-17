@@ -1,0 +1,74 @@
+{% extends 'base.html'%}
+{% load crispy_forms_tags %}
+{% block title %}
+<title>My Profile</title>
+{% endblock %}
+{% block content %}
+  <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">
+            You sure to follow {{object}}.</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <p>By clicking yes you follow {{object}}</p>
+            <div class="actions">
+                <form action="{% url 'follow-unfollow' object.pk %}" method="POST">
+                    {% csrf_token %}
+                      <input type="hidden" name="profile_pk" value="{{object.pk}}">
+                <button type="submit" class="ui green basic ok massive button">
+                    <i class="checkmark"></i>
+                    Yes
+                </button>
+                </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="ui grid mt-30">
+  <div class="row mt-30">
+      <div class="four wide column">
+          <img src="{{object.prof_pic.url}}" height="200px">
+          <div><p>{{object}}</p></div>
+          <hr>
+          {% if follow %}
+          <form action="{% url 'follow-unfollow' object.pk %}" method="post">
+              {% csrf_token %}
+              <input type="hidden" name="profile_pk" value="{{object.pk}}">
+              <button type="submit" class="btn-sm negative button">unfollow</button>
+          </form>
+          {% else %}
+          <button type="button" id="modal" class="btn-sm btn-info" data-toggle="modal" data-target="#staticBackdrop">
+            folllow
+          </button>
+          {% endif %}
+      </div>
+      <div class="twelve wide column">
+          {% for post in object.profiles.posts %}
+          <div class="ui segment">
+              {{post.body}}
+          </div>
+          {% endfor %}
+      </div>
+  </div>  
+</div>
+{% endblock %}
+{% block scripts %}
+
+<script>
+    $(document).ready(function(){
+        $('#follow-button').click(function(){
+            $('#modal')
+            .modal('show')
+        })
+    ;
+    })
+</script>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+</div>
+    {% for post in posts %}
+    <div class="ui segment">
+      <p>{{post}}</p>
+      <a href="{% url 'profile-details' post.pk %}">
+        <button class=" btn-sm btn-info">See Profile</button>
+      </a>
+    </div>
+    {% endfor %}
+{% endblock content %}
+
