@@ -29,11 +29,11 @@ class TestImage(TestCase):
         images = Image.objects.all()
         self.assertTrue(len(images) == 0)
 
-    # def test_update_image(self):
-    #     self.image_test.save_image()
-    #     self.image_test.update_image(self.image_test.id, 'photos/test.jpg')
-    #     changed_img = Image.objects.filter(image='photos/test.jpg')
-    #     self.assertTrue(len(changed_img) > 0)
+    def test_update_image(self):
+        self.image_test.save_image()
+        self.image_test.update_image(self.image_test.id, 'photos/test.jpg')
+        changed_img = Image.objects.filter(image='photos/test.jpg')
+        self.assertTrue(len(changed_img) > 0)
 
     def test_get_image_by_id(self):
         found_image = self.image_test.get_image_by_id(self.image_test.id)
