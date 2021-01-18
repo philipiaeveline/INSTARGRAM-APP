@@ -5,13 +5,13 @@ from django.test import TestCase
 from .models import Image, Profile, Follow, Comment
 
 
-# class TestImage(TestCase):
-#     def setUp(self):
-#         self. profile = Profile(name='home')
-#         self.profile.save_profile()
+class TestImage(TestCase):
+    def setUp(self):
+        self. profile = Profile(name='home')
+        self.profile.save_profile()
 
-#         self.follow = Follow(name='page')
-#         self.follow.save_follow()
+        self.follow = Follow(name='page')
+        self.follow.save_follow()
 
         self.image_test = Image(id=1, name='image', description='this is a test image', profile=self.Profile,
                                 profile=self.)
