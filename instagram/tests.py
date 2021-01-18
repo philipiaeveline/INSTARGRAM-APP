@@ -8,7 +8,7 @@ from .models import Image, Profile, Follow, Comment
 
 class TestImage(TestCase):
     def setUp(self):
-        self. profile =  Profile(name='home')
+        self. profile = Profile(name='home')
         self.profile.save_profile()
 
         self.follow = Follow(name='page')
@@ -43,16 +43,17 @@ class TestImage(TestCase):
 
     def test_search_image_by_profile(self):
         self.image_test.save_image()
-        found_images = self.image_test.filter_by_location(profile='home')
+        found_images = self.image_test.filter_by_follow(profile='home')
         self.assertTrue(len(found_images) == 1)
 
     def test_search_image_by_follow(self):
-        category = 'page'
-        found_img = self.image_test.search_by_category(follow)
+        profile = 'page'
+        found_img = self.image_test.search_by_profile(follow)
         self.assertTrue(len(found_img) > 1)
 
     def tearDown(self):
         Image.objects.all().delete()
         Profile.objects.all().delete()
         Follow.objects.all().delete()
+
 
