@@ -1,0 +1,1 @@
+web: gunicorn instargram-app.wsgi --log-file -
