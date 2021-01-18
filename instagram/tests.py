@@ -5,14 +5,13 @@ from django.test import TestCase
 
 # Create your tests here.
 from django.test import TestCase
-
-from .models import Image, Category, Location
+from .models import Image, Profile, Follow, Comment
 
 
 class TestImage(TestCase):
     def setUp(self):
-        self.location = Location(name='home')
-        self.location.save_location()
+        self. profile =  Profile(name='home')
+        self.profile.save_profile()
 
         self.category = Category(name='page')
         self.category.save_category()
